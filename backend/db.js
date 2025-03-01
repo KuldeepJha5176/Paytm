@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { Schema, string } from "zod";
+const mongoose = require("mongoose");
+
 
 mongoose.connect("mongodb://localhost:27017/paytm");
 

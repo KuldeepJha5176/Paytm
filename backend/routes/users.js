@@ -1,7 +1,7 @@
 const express = require("express");
-const zod = require("zod");
+const Zod = require("zod");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt")
 const User  = require("../db")
 const { JWT_SECRET } = require("../config");
 const router = express.Router();
@@ -91,10 +91,10 @@ const  { authMiddleware } = require("../middleware");
 
 // other auth routes
 
-const updateBody = zod.object({
-	password: zod.string().optional(),
-    firstName: zod.string().optional(),
-    lastName: zod.string().optional(),
+const updateBody = Zod.object({
+	password: Zod.string().optional(),
+    firstName: Zod.string().optional(),
+    lastName: Zod.string().optional(),
 })
 
 router.put("/", authMiddleware, async (req, res) => {
