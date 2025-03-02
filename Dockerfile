@@ -1,3 +1,7 @@
 FROM mongo:4.4.7
-RUN echo "rs.initiate();" > /docker-entrypoint-initdb.d/replica-init.js
-CMD [ "--replSet", "rs" ]
+
+# Copy the initialization script
+COPY init-replica.js /docker-entrypoint-initdb.d/
+
+# Set the command to run MongoDB with replica set enabled
+CMD ["mongod", "--bind_ip_all", "--replSet", "rs"]
