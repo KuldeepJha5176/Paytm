@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt")
 const { User } = require("../db");
 const { Account } = require("../db");
 const { JWT_SECRET } = require("../config");
+const  { authMiddleware } = require("../middleware");
 const router = express.Router();
 
 const signupBody = Zod.object({
@@ -88,7 +89,7 @@ router.post("/signin",async(req,res)=>{
     return;
 
 })
-const  { authMiddleware } = require("../middleware");
+
 
 
 // other auth routes
