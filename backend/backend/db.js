@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/paytmApp")
+mongoose.connect("mongodb+srv://ranacjha:jha1234@cluster0.axylg.mongodb.net/Paytm")
   .then(() => console.log("✅ MongoDB connected successfully!"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
 const userSchema = new mongoose.Schema({

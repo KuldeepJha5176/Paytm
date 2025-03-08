@@ -48,11 +48,16 @@ router.post("/signup",async(req,res)=>{
     },JWT_SECRET);
 
     return res.status(201).json({
-             message: "User created successfully",
-             token: `Bearer ${token}`,
-             user: { _id: user._id, firstName: user.firstName, lastName: user.lastName, email: user.email } // Ensure user._id exists
-        });
-        
+        message:"User created successfully",
+        token:`Bearer ${token}`,
+        user :{
+            _id:user._id,
+            username:user.username,
+            firstName:user.firstName,
+            lastName:user.lastName,
+        }       
+    })
+
 })
 
 const signinBody = Zod.object({
