@@ -11,7 +11,7 @@ This is a basic version of PayTM. It is not a complete version of PayTM. It is j
 
 1.  Clone the repo
     ```
-    git clone 
+    git clone https://github.com/KuldeepJha5176/Paytm.git
 
 
         
@@ -27,5 +27,5 @@ This is a basic version of PayTM. It is not a complete version of PayTM. It is j
     npm start
 
 
-        
+
     ```
